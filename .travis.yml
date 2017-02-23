@@ -1,4 +1,6 @@
 language: android
+jdk: oraclejdk8
+ sudo: required
 android:
   components:
     # Uncomment the lines below if you want to
@@ -13,14 +15,16 @@ android:
     - android-25
 
     # Additional components
-    - extra-google-google_play_services
     - extra-google-m2repository
     - extra-android-m2repository
     - addon-google_apis-google-25
-
+    - extra-android-support
     # Specify at least one system image,
     # if you need to run emulator(s) during your tests
-    - sys-img-armeabi-v7a-android-25
-    - sys-img-armeabi-v7a-android-15
+    # - sys-img-armeabi-v7a-android-25
+  licenses:
+    - 'android-sdk-preview-license-52d11cd2'
+    - 'android-sdk-license-.+'
+    - 'google-gdk-license-.+'
 script:
-  - "./gradlew assembleRelease"
+    - ./gradlew assembleRelease
