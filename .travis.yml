@@ -27,5 +27,7 @@ android:
     - 'google-gdk-license-.+'
 sudo: required
 jdk: oraclejdk8
+before_script:
+  - chmod +x gradlew
 script:
     - ./gradlew assembleRelease
