@@ -1,6 +1,5 @@
 language: android
-jdk: oraclejdk8
- sudo: required
+
 android:
   components:
     # Uncomment the lines below if you want to
@@ -26,5 +25,7 @@ android:
     - 'android-sdk-preview-license-52d11cd2'
     - 'android-sdk-license-.+'
     - 'google-gdk-license-.+'
+sudo: required
+jdk: oraclejdk8
 script:
     - ./gradlew assembleRelease
